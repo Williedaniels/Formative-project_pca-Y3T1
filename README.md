@@ -56,7 +56,7 @@ node src/app.js
               "inventory": 10
             }
           ],
-          "categories": ["category_id"] // Optional: Array of category IDs
+          "categories": ["category_id"] 
         }
 ```
 
@@ -75,18 +75,18 @@ node src/app.js
           "description": "Updated Product Description",
           "variants": [
             {
-              "_id": "existing_variant_id", // Optional: If you want to update an existing variant, include its ID
+              "_id": "existing_variant_id", 
               "name": "Updated Variant Name",
               "price": 149.99,
               "inventory": 20
             },
             {
-              "name": "New Variant Name", // Optional: If you want to add a new variant, don't include an _id
+              "name": "New Variant Name", 
               "price": 199.99,
               "inventory": 10
             }
           ],
-          "categories": ["category_id"] // Optional: Array of category IDs
+          "categories": ["category_id"] 
         }
 ```
 
@@ -94,26 +94,26 @@ node src/app.js
 * **`PATCH /api/products/:id`** - Partially update a product by ID.
   * **Request Body:** You can include any of the product fields to update them.
 
-```json
-        {
-          "price": 199.99,
-          "description": "Updated Product Description"
-        }
-        ```
+```js
+{
+  "price": 199.99,
+  "description": "Updated Product Description"
+}
+```
 
-        or
+or
 
-        ```json
-        {
-          "variants": [
-            {
-              "_id": "existing_variant_id",
-              "name": "Updated Variant Name",
-              "price": 149.99,
-              "inventory": 20
-            }
-          ]
-        }
+```js
+{
+  "variants": [
+    {
+      "_id": "existing_variant_id",
+      "name": "Updated Variant Name",
+      "price": 149.99,
+      "inventory": 20
+    }
+  ]
+}
 ```
 
 * **Response:** Returns the updated product.
