@@ -2,16 +2,15 @@ const express = require('express');
 const router = express.Router();
 const productController = require('../controllers/productController');
 
-router.route('/')
-  .get(productController.getAllProducts)
-  .post(productController.createProduct); // POST handler
+// Define routes for products
+router.get('/', productController.getAllProducts);
+router.get('/:id', productController.getProductById);
+router.post('/', productController.createProduct);
+router.put('/:id', productController.updateProduct);
+router.patch('/:id', productController.patchProduct); // Add this line
+router.delete('/:id', productController.deleteProduct);
 
-router.route('/:id')
-  .get(productController.getProductById)
-  .put(productController.updateProduct) // PUT handler
-  .delete(productController.deleteProduct); // DELETE handler
-
-// Variant routes
+// Define routes for variants
 router.post('/:productId/variants', productController.addVariant);
 router.put('/:productId/variants/:variantId', productController.updateVariant);
 router.delete('/:productId/variants/:variantId', productController.deleteVariant);
