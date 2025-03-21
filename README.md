@@ -275,3 +275,7 @@ The API returns appropriate HTTP status codes and error messages for various sce
 * Remember to replace placeholders like 'product_id', 'category_id', and 'existing_variant_id' with actual IDs from your database.
 * You can use tools like Postman or curl to test the API endpoints.
 * The 'seedDatabase.js' file will create two categories and two products.
+
+## Author
+
+Willie B Daniels <w.daniels@alustudent.com>
